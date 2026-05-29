@@ -3,7 +3,11 @@ import { useRef } from 'react';
 
 const About = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
+
+  const isInView = useInView(ref, {
+    once: true,
+    margin: '-100px',
+  });
 
   const skills = [
     'React',
@@ -18,18 +22,18 @@ const About = () => {
   return (
     <section
       id="about"
-      className="relative flex items-center py-20 bg-stone-100 overflow-hidden"
+      className="relative py-20 lg:py-32 bg-stone-50 overflow-hidden"
     >
       {/* Background Text */}
       <div
         className="
           absolute
-          right-10
-          -top-8
-          text-[50px]
+          right-6
+          top-0
+          text-[90px]
           xl:text-[180px]
           font-black
-          text-stone-200
+          text-stone-200/50
           pointer-events-none
           select-none
           hidden lg:block
@@ -51,7 +55,8 @@ const About = () => {
           ABOUT
         </motion.p>
 
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-20 items-center">
+        {/* Changed lg:grid-cols-2 to xl:grid-cols-2 */}
+        <div className="grid xl:grid-cols-2 gap-10 xl:gap-20 items-center">
 
           {/* LEFT */}
           <motion.div
@@ -59,7 +64,20 @@ const About = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-display text-4xl sm:text-5xl lg:text-7xl font-bold text-stone-900 leading-[0.95] mb-10">
+            {/* Fixed responsive heading */}
+            <h2
+              className="
+                text-display
+                text-4xl
+                sm:text-5xl
+                lg:text-6xl
+                xl:text-7xl
+                font-bold
+                text-stone-900
+                leading-[0.95]
+                mb-10
+              "
+            >
               Building Digital
               <br />
               Experiences With
@@ -123,14 +141,16 @@ const About = () => {
             transition={{ duration: 0.8, delay: 0.1 }}
             className="relative"
           >
-            {/* Image Container */}
-            <div className="
-relative
-lg:absolute
-lg:-bottom-6
-lg:-left-6
-mt-4
-">
+            {/* Image */}
+            <div
+              className="
+                relative
+                lg:absolute
+                lg:-bottom-6
+                lg:-left-6
+                mt-4
+              "
+            >
               <img
                 src="/about.jpeg"
                 alt="Developer Workspace"
@@ -146,22 +166,23 @@ mt-4
               <div className="absolute inset-0 rounded-2xl border border-white/20 pointer-events-none" />
             </div>
 
-            {/* Floating Stats Card */}
+            {/* Stats Card */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.4 }}
               className="
                 relative
-mt-4
-mx-auto
-w-fit
+                mt-4
+                mx-auto
+                w-fit
                 bg-white
                 shadow-xl
                 rounded-2xl
                 px-6
                 py-5
-                border border-stone-200
+                border
+                border-stone-200
               "
             >
               <div className="flex gap-8">

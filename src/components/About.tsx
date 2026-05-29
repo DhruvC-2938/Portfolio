@@ -28,8 +28,8 @@ const About = () => {
       <div
         className="
           absolute
-          right-6
-          top-0
+          right-10
+          top-10
           text-[90px]
           xl:text-[180px]
           font-black
@@ -70,8 +70,8 @@ const About = () => {
                 text-display
                 text-4xl
                 sm:text-5xl
-                lg:text-6xl
-                xl:text-7xl
+                lg:text-[4.5rem]
+xl:text-[5rem]
                 font-bold
                 text-stone-900
                 leading-[0.95]
@@ -143,14 +143,13 @@ const About = () => {
           >
             {/* Image */}
             <div
-              className="
-                relative
-                lg:absolute
-                lg:-bottom-6
-                lg:-left-6
-                mt-4
-              "
-            >
+  className="
+    relative
+    mt-4
+    max-w-[560px]
+    mx-auto
+  "
+>
               <img
                 src="/about.jpeg"
                 alt="Developer Workspace"
@@ -172,10 +171,11 @@ const About = () => {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.4 }}
               className="
-                relative
-                mt-4
-                mx-auto
-                w-fit
+                absolute
+  bottom-6
+  left-1/2
+  -translate-x-1/2
+  w-fit
                 bg-white
                 shadow-xl
                 rounded-2xl
@@ -209,9 +209,9 @@ const About = () => {
             {/* Corner Label */}
             <div
               className="
-                absolute
-                -top-8
-                right-0
+                 absolute
+  bottom-36
+  right-8
                 text-mono
                 text-xs
                 tracking-[0.3em]

@@ -128,11 +128,11 @@ const Hero = () => {
               </motion.button>
 
               <motion.a
-  href="https://github.com/DhruvC-2938"
-  target="_blank"
-  rel="noopener noreferrer"
-  style={{ willChange: 'transform' }}
-  className="
+                href="https://github.com/DhruvC-2938"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ willChange: 'transform' }}
+                className="
     flex
     items-center
     justify-center
@@ -152,21 +152,21 @@ const Hero = () => {
     transition-colors
     duration-300
   "
-  whileHover={{
-    scale: 1.04,
-    y: -2,
-  }}
-  whileTap={{
-    scale: 0.97,
-  }}
-  transition={{
-    type: 'spring',
-    stiffness: 400,
-    damping: 20,
-  }}
->
-  GitHub
-</motion.a>
+                whileHover={{
+                  scale: 1.04,
+                  y: -2,
+                }}
+                whileTap={{
+                  scale: 0.97,
+                }}
+                transition={{
+                  type: 'spring',
+                  stiffness: 400,
+                  damping: 20,
+                }}
+              >
+                GitHub
+              </motion.a>
             </div>
           </motion.div>
         </div>
@@ -184,8 +184,8 @@ const Hero = () => {
           <div className="grid sm:grid-cols-3 gap-8">
             {[
               { number: '10', label: 'Projects Built' },
-              { number: '500+', label: 'Open Source Contributions' },
-              { number: '2+', label: 'Years Coding' },
+              { number: '100+', label: 'Open Source Contributions' },
+              { number: '1+', label: 'Years Coding' },
             ].map((stat, i) => (
               <motion.div
                 key={i}

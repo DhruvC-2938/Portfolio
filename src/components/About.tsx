@@ -143,13 +143,13 @@ xl:text-[5rem]
           >
             {/* Image */}
             <div
-  className="
+              className="
     relative
     mt-4
     max-w-[560px]
     mx-auto
   "
->
+            >
               <img
                 src="/about.jpeg"
                 alt="Developer Workspace"
@@ -197,7 +197,7 @@ xl:text-[5rem]
 
                 <div>
                   <h4 className="text-2xl font-bold text-stone-900">
-                    500+
+                    100+
                   </h4>
                   <p className="text-xs text-stone-500 uppercase tracking-wider">
                     Contributions
